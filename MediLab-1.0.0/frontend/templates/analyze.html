@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">Analyze Histology Image</h2>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <form action="{{ url_for('analyze') }}" method="POST" enctype="multipart/form-data" class="border p-4 shadow rounded">
+      <div class="mb-3">
+        <label for="file" class="form-label">Upload Histopathology Image</label>
+        <input type="file" name="file" class="form-control" id="file" accept="image/*" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Submit for Analysis</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,127 @@
+/* style.css - main styling for Detectr+ */
+
+/* Base body */
+:root{
+  --accent: #5b8def;
+  --accent-2: #7bd389;
+  --bg: #0f1720;
+  --card: #0f1b26;
+  --muted: #bfc8d6;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #07111a 0%, #071822 45%, #02121a 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Container adjustments */
+.container {
+  max-width:1100px;
+}
+
+/* Hero */
+.hero-section{
+  padding:6rem 1rem;
+  background: radial-gradient(800px 200px at 10% 10%, rgba(91,141,239,0.06), transparent 10%),
+              radial-gradient(600px 180px at 90% 80%, rgba(123,211,137,0.04), transparent 10%);
+  border-radius:16px;
+  margin-bottom:2rem;
+  box-shadow: 0 6px 30px rgba(5,10,15,0.6);
+}
+
+.hero-section .display-4{
+  font-weight:700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.hero-section .lead{
+  color: var(--muted);
+  font-size:1.1rem;
+  margin-top:0.5rem;
+}
+
+/* Buttons */
+.btn-primary{
+  background: linear-gradient(180deg,var(--accent),#3f6ddf);
+  border: none;
+  box-shadow: 0 6px 20px rgba(91,141,239,0.18);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 10px 30px rgba(91,141,239,0.26); }
+.btn-outline-light{ border-color: rgba(255,255,255,0.08); color: #fff; }
+
+/* Cards & features */
+.card, .border {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03) !important;
+}
+.features .col-md-4 {
+  padding: 1.75rem;
+  border-radius: 12px;
+}
+
+/* Navbar */
+.navbar-brand{
+  font-weight:700;
+  color:#fff !important;
+  letter-spacing:0.6px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,0.85);
+  margin-left: 0.35rem;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Forms */
+.form-control{
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #e9f0fb;
+}
+.form-control:focus{
+  box-shadow: 0 6px 18px rgba(91,141,239,0.12);
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Footer */
+footer{
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Small utilities */
+.text-muted-soft { color: var(--muted); }
+.rounded-lg { border-radius: 14px; }
+.shadow { box-shadow: 0 6px 28px rgba(2,6,12,0.6); }
+
+/* Results page layout */
+.results-grid { display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+.results-left { flex: 1 1 360px; min-width:260px; }
+.results-right { flex: 1 1 360px; min-width:260px; }
+
+/* Image preview */
+#preview {
+  max-height: 380px;
+  object-fit: contain;
+  display:block;
+  margin:0 auto;
+  border-radius:10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* little responsive adjustments */
+@media (max-width:767px){
+  .hero-section { padding:3rem 1rem; }
+  .navbar-nav { text-align:center; }
+  .results-grid { flex-direction:column; }
+}

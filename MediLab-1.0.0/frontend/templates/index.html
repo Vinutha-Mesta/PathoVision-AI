@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="text-center hero-section">
+  <h1 class="display-4 fw-bold fade-in">Welcome to Detectr+</h1>
+  <p class="lead fade-in-delay">AI-powered Histopathology Image Analysis for Colon & Lung Cancer Detection</p>
+  <div class="mt-4">
+    <a href="{{ url_for('analyze') }}" class="btn btn-primary btn-lg me-2 shadow">Analyze Image</a>
+    <a href="{{ url_for('about') }}" class="btn btn-outline-light btn-lg shadow">Learn More</a>
+  </div>
+</section>
+
+<section class="features mt-5">
+  <div class="row text-center">
+    <div class="col-md-4 fade-in">
+      <h3>🔍 Accurate Detection</h3>
+      <p>Deep learning models trained on histopathology images ensure reliable cancer detection.</p>
+    </div>
+    <div class="col-md-4 fade-in-delay">
+      <h3>🧠 Multi-Tier Analysis</h3>
+      <p>Tiered models classify organs, detect cancer, and predict stages when cancer is present.</p>
+    </div>
+    <div class="col-md-4 fade-in-late">
+      <h3>📊 Explainable AI</h3>
+      <p>Grad-CAM heatmaps highlight regions of interest for transparent decision-making.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

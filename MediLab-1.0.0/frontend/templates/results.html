@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">Analysis Results</h2>
+<div class="card shadow p-4">
+  <h4>Prediction:</h4>
+  <p><strong>Organ:</strong> {{ organ }}</p>
+  <p><strong>Status:</strong> {{ status }}</p>
+  {% if stage %}
+  <p><strong>Stage:</strong> {{ stage }}</p>
+  {% endif %}
+
+  {% if heatmap %}
+  <h4 class="mt-4">Grad-CAM Heatmap</h4>
+  <img src="{{ url_for('static', filename='images/' + heatmap) }}" class="img-fluid rounded shadow">
+  {% endif %}
+</div>
+{% endblock %}
